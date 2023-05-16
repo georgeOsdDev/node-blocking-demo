@@ -1,4 +1,4 @@
-# Demo for blocking behaviour of Node.js `fs` module with Azure Functions Node Language Worker
+# Demo for blocking behavior of Node.js `fs` module with Azure Functions Node Language Worker
 
 ## Application Setting
 [`FUNCTIONS_WORKER_PROCESS_COUNT`](https://learn.microsoft.com/en-us/azure/azure-functions/functions-app-settings#functions_worker_process_count) default = 1
@@ -8,7 +8,7 @@
 `TimerTrigger1`
 Executed every 1 min(`"0 */1 * * * *"`)
 
-Basically this funcion invocation finish in 10 seconds
+Basically this function invocation finish in 10 seconds
 ```
 [2023-05-16T11:46:00.006Z] Executing 'Functions.TimerTrigger1' (Reason='Timer fired at 2023-05-16T11:46:00.0058799+00:00', Id=60f8da82-2ac9-4dc2-9cd7-907dd3f2627c)
 [2023-05-16T11:46:00.019Z] [Timer1 start] PID:14731, InvocationId:60f8da82-2ac9-4dc2-9cd7-907dd3f2627c, 2023-05-16T11:46:00.014Z
