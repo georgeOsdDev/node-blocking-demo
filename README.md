@@ -1,5 +1,7 @@
 # Demo for blocking behavior of Node.js `fs` module with Azure Functions Node Language Worker
 
+[Azure Functions の Node Language Worker の同時実行を理解する - Qiita](https://qiita.com/georgeOsdDev@github/items/296f0a03dc65ea0adc1b)
+
 ## Application Setting
 [`FUNCTIONS_WORKER_PROCESS_COUNT`](https://learn.microsoft.com/en-us/azure/azure-functions/functions-app-settings#functions_worker_process_count) default = 1
 
