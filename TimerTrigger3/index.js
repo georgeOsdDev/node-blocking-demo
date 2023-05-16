@@ -2,7 +2,7 @@ const fs = require('fs-extra');
 const FROM_DIR = "./dummyDataFrom";
 const TO_DIR = "./dummyDataTo";
 module.exports = async function (context, myTimer) {
-    context.log(`[Timer3(Non blocking) start] ${context.invocationId}, ${new Date().toISOString()}`);
+    context.log(`[Timer3(Non blocking) start] PID:${process.pid}, InvocationId:${context.invocationId}, ${new Date().toISOString()}`);
     const directories = await fs.readdir(FROM_DIR);
     let coppied =0;
     for (const dir of directories) {
@@ -19,9 +19,9 @@ module.exports = async function (context, myTimer) {
                         context.log.error('[Timer3]copy', err);
                       }
                 }
-                // context.log(`[Timer3] ${context.invocationId}, ${FROM_DIR}/${dir}/${file}, ${stat2}, ${new Date().toISOString()}`);
+                // context.log(`[Timer3] PID:${process.pid}, InvocationId:${context.invocationId}, ${FROM_DIR}/${dir}/${file}, ${stat2}, ${new Date().toISOString()}`);
             }
         }
     }
-    context.log(`[Timer3(Non blocking) end] ${context.invocationId}, ${coppied}, ${new Date().toISOString()}`);
+    context.log(`[Timer3(Non blocking) end] PID:${process.pid}, InvocationId:${context.invocationId}, ${coppied}, ${new Date().toISOString()}`);
 };
